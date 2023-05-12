@@ -1,0 +1,362 @@
+[
+  {
+    "Id": 3,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "11-05-2023T12:20:00",
+      "Duration": 15
+    },
+    "Anamnesis": "najnovija anamznea za najnovijeg pacjenta",
+    "Specialization": 1
+  },
+  {
+    "Id": 4,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "01-01-2222T00:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "najnovija anamznea za najnovijeg pacjenta",
+    "Specialization": 2
+  },
+  {
+    "Id": 6,
+    "IdDoctor": 15,
+    "IdPatient": 0,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "01-01-2034T00:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "s",
+    "Specialization": 1
+  },
+  {
+    "Id": 7,
+    "IdDoctor": 15,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "01-01-2323T00:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 1
+  },
+  {
+    "Id": 8,
+    "IdDoctor": 15,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "01-01-2333T00:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 1
+  },
+  {
+    "Id": 9,
+    "IdDoctor": 15,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "01-01-2333T00:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 1
+  },
+  {
+    "Id": 10,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T19:47:00",
+      "Duration": 15
+    },
+    "Anamnesis": "najnovija anamznea za najnovijeg pacjenta",
+    "Specialization": 5
+  },
+  {
+    "Id": 12,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T21:15:00",
+      "Duration": 15
+    },
+    "Anamnesis": "kako ovo radi",
+    "Specialization": 5
+  },
+  {
+    "Id": 13,
+    "IdDoctor": 15,
+    "IdPatient": 12,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T21:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": null,
+    "Specialization": 1
+  },
+  {
+    "Id": 14,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T21:30:00",
+      "Duration": 15
+    },
+    "Anamnesis": null,
+    "Specialization": 5
+  },
+  {
+    "Id": 15,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T21:45:00",
+      "Duration": 15
+    },
+    "Anamnesis": null,
+    "Specialization": 5
+  },
+  {
+    "Id": 16,
+    "IdDoctor": 10,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T22:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": null,
+    "Specialization": 5
+  },
+  {
+    "Id": 17,
+    "IdDoctor": 15,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "09-05-2023T22:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "kako ovo radi",
+    "Specialization": 1
+  },
+  {
+    "Id": 18,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "10-05-2023T18:45:00",
+      "Duration": 15
+    },
+    "Anamnesis": "kako ovo radi",
+    "Specialization": 6
+  },
+  {
+    "Id": 19,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "10-05-2023T19:30:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 20,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "10-05-2023T19:45:00",
+      "Duration": 15
+    },
+    "Anamnesis": "kako ovo radi",
+    "Specialization": 6
+  },
+  {
+    "Id": 21,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "11-05-2023T08:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 22,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T08:15:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 23,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T09:00:00",
+      "Duration": 35
+    },
+    "Anamnesis": "kaze da je bas bolesna",
+    "Specialization": 6
+  },
+  {
+    "Id": 24,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T09:45:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 25,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "10-05-2023T19:00:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 26,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": false,
+    "TimeSlot": {
+      "Start": "10-05-2023T19:15:00",
+      "Duration": 15
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 27,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T10:30:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 28,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T11:15:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 29,
+    "IdDoctor": 15,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "10-05-2023T19:15:00",
+      "Duration": 35
+    },
+    "Anamnesis": "neka nova kul bolest",
+    "Specialization": 1
+  },
+  {
+    "Id": 30,
+    "IdDoctor": 15,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T08:00:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 1
+  },
+  {
+    "Id": 31,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T12:00:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 32,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T12:45:00",
+      "Duration": 35
+    },
+    "Anamnesis": "kaze da je bas bolesna",
+    "Specialization": 6
+  },
+  {
+    "Id": 33,
+    "IdDoctor": 5,
+    "IdPatient": 0,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T13:30:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  },
+  {
+    "Id": 34,
+    "IdDoctor": 5,
+    "IdPatient": 2,
+    "IsOperation": true,
+    "TimeSlot": {
+      "Start": "11-05-2023T14:15:00",
+      "Duration": 35
+    },
+    "Anamnesis": "",
+    "Specialization": 6
+  }
+]

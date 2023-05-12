@@ -1,0 +1,35 @@
+﻿<Window x:Class="Hospital.View.PatientAppointmentsOverview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="AppointmentsOverview" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" Height="40">
+            <Button Click="ShowCreateAppointmentWindow_Click" Margin="5">
+                <AccessText>_Create</AccessText>
+            </Button>
+            <Button Click="ShowCreatePriorityAppointmentWindow_Click" Margin="5">
+                <AccessText>_CreateWithPriority</AccessText>
+            </Button>
+            <Button Click="EditAppointmentButtonWindow_Click" Margin="5">
+                <AccessText>_Edit</AccessText></Button>
+            <Button Click="DeleteAppointmentButton_Click" Margin="5"><AccessText>_Delete</AccessText></Button>
+            <Button Click="ShowAnamnesis_Click" Margin="5">
+                <AccessText>_Show Anamnesis</AccessText>
+            </Button>
+        </ToolBar>
+        <DataGrid DockPanel.Dock="Bottom"
+                  ItemsSource="{Binding Path=Appointments, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding Path=SelectedAppointment, UpdateSourceTrigger=PropertyChanged}"
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  Width="700" Height="350">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding TimeSlot.Start, StringFormat={}{0:MM/dd/yyyy}}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Time" Binding="{Binding TimeSlot.Start, StringFormat={}{0:HH:mm}}" Width="300"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor" Binding="{Binding IdDoctor}" Width="300"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>

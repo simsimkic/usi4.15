@@ -1,0 +1,43 @@
+﻿<Window x:Class="Hospital.View.AnamnesisOverview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital.View"
+        mc:Ignorable="d"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:SortOption="clr-namespace:Hospital.Model"
+        Title="AnamnesisOverview" Height="450" Width="800">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="sortOption" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="SortOption:SortOption"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top" Height="40">
+                <Label>Search anamnesis</Label>
+                <TextBox x:Name="AnamnesisTxt" TextChanged="SearchAnamnesis" TextWrapping="Wrap"  Width="200"/>
+                <Label Margin="100, 5, 0 ,5">Sort by:</Label>
+                <ComboBox ItemsSource="{Binding Source={StaticResource sortOption}}"
+                  SelectedItem="{Binding Path=SelectedSortOption}" Width="150" Height="30" SelectionChanged="OrderAnamnesis"/>
+            </ToolBar>
+            <DataGrid x:Name="AnamnesisDataGrid" DockPanel.Dock="Bottom"
+                  ItemsSource="{Binding Path=Appointments, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding Path=SelectedAppointment, UpdateSourceTrigger=PropertyChanged}"
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  Width="700" Height="350">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding TimeSlot.Start, StringFormat={}{0:MM/dd/yyyy}}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Time" Binding="{Binding TimeSlot.Start, StringFormat={}{0:HH:mm}}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor" Binding="{Binding IdDoctor}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Specialization" Binding="{Binding SpecializationString}" Width="100" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Anamnesis" Binding="{Binding Anamnesis}" Width="300"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        </DockPanel>
+    </Grid>
+</Window>

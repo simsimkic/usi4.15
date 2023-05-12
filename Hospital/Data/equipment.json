@@ -1,0 +1,27 @@
+﻿[
+  {
+    "name": "stolica",
+    "type": 0,
+    "purpose": 2
+  },
+  {
+    "name": "bandazer",
+    "type": 1,
+    "purpose": 1
+  },
+  {
+    "name": "slika",
+    "type": 0,
+    "purpose": 3
+  },
+  {
+    "name": "gaza",
+    "type": 1,
+    "purpose": 3
+  },
+  {
+    "name": "krevet",
+    "type": 0,
+    "purpose": 2
+  }
+]

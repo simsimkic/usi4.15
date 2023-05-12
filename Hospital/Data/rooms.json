@@ -1,0 +1,79 @@
+[
+  {
+    "number": "01S",
+    "purpose": 0,
+    "equipmentCount": {
+      "stolica": 2,
+      "bandazer": 70,
+      "gaza": 73
+    }
+  },
+  {
+    "number": "01O",
+    "purpose": 2,
+    "equipmentCount": {
+      "stolica": 0,
+      "bandazer": 3
+    }
+  },
+  {
+    "number": "01C",
+    "purpose": 1,
+    "equipmentCount": {
+      "stolica": 4
+    }
+  },
+  {
+    "number": "02C",
+    "purpose": 1,
+    "equipmentCount": {
+      "stolica": 1
+    }
+  },
+  {
+    "number": "03C",
+    "purpose": 1,
+    "equipmentCount": {
+      "stolica": 2
+    }
+  },
+  {
+    "number": "04C",
+    "purpose": 1,
+    "equipmentCount": {
+      "stolica": 1
+    }
+  },
+  {
+    "number": "01P",
+    "purpose": 4,
+    "equipmentCount": {
+      "stolica": 1,
+      "krevet": 1
+    }
+  },
+  {
+    "number": "02P",
+    "purpose": 4,
+    "equipmentCount": {
+      "stolica": 1,
+      "krevet": 1
+    }
+  },
+  {
+    "number": "03P",
+    "purpose": 4,
+    "equipmentCount": {
+      "stolica": 1,
+      "krevet": 1
+    }
+  },
+  {
+    "number": "04P",
+    "purpose": 4,
+    "equipmentCount": {
+      "stolica": 1,
+      "krevet": 1
+    }
+  }
+]

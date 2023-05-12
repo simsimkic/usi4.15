@@ -1,0 +1,95 @@
+﻿<Window x:Class="Hospital.View.CreateEmergencyAppointment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital.View"
+        mc:Ignorable="d"
+        Title="CreateEmergencyAppointment" Height="450" Width="800"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:Specialization="clr-namespace:Hospital.Model">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="doctorSpecialization" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="Specialization:Specialization"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="50,0,50,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"  Height="30">Pick Doctor Specialization :</Label>
+                <ComboBox x:Name="specCB" Grid.Row="1"  ItemsSource="{Binding Source={StaticResource doctorSpecialization}}"
+                  SelectedItem="{Binding Path=SelectedSpecialization,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Margin="0,0,0,10"/>
+            </Grid>
+             <CheckBox x:Name="CheckUpCheckBox"
+                      Grid.Row="0" 
+                      Grid.Column="1" 
+                      Content="operation"  
+                      HorizontalAlignment="Left"
+                      Margin="10,10,0,0" 
+                      VerticalAlignment="Center"
+                      IsChecked="{Binding Path=IsOperation, UpdateSourceTrigger=PropertyChanged}" Width="90" Height="35"
+                     />
+             <Button Content ="Find" 
+                    IsDefault="True" 
+                    Grid.Row="0" Grid.Column="3" 
+                    Margin="40,20,0,20"
+                    Click="CreateEmergancyAppointment_Click" />
+            </Grid>
+        <DataGrid DockPanel.Dock="Bottom"
+                  Grid.Row="1"
+                  ItemsSource="{Binding Path=ShowMovableAppointments, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding Path=SelectedAppointment, UpdateSourceTrigger=PropertyChanged}"
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  Width="700" Height="350">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Doctor Id" Binding="{Binding IdDoctor}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Patient Id" Binding="{Binding IdPatient}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date" Binding="{Binding TimeSlot.Start}" Width="300"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" HorizontalAlignment="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"  
+                       Margin="0,0,0,0">In the next</Label>
+                <ComboBox x:Name="hoursCB" 
+                      SelectedItem="{Binding Path=Postponment,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                      Grid.Row="1" 
+                      ItemsSource="{Binding Path=Hours}"
+                      Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+                <Label Grid.Row="2"  
+                       Margin="0,0,0,0">Hours</Label>
+            </Grid>
+            <Button Grid.Column="2"
+                    Content="Move" 
+                    IsDefault="True"
+                    Margin="40,20,40,20"
+                    Click="MoveAppointment_Click" />
+        </Grid>
+    </Grid>
+</Window>

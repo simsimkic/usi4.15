@@ -1,0 +1,44 @@
+﻿<Window x:Class="Hospital.View.PatientOverview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="PatientOverview" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" Height="40">
+            <Button Click="ShowCreatePatientWindow_Click" Margin="5">
+                <AccessText>_Create</AccessText>
+            </Button>
+            <Button Click="DeletePatientButton_Click" Margin="5">
+                <AccessText>_Delete</AccessText>
+            </Button>
+            <Button Click="ShowUpdatePatientWindow_Click" Margin="5">
+                <AccessText>_Update</AccessText>
+            </Button>
+            <Button Click="ShowRecievePatientWindow_Click" Margin="5">
+                <AccessText>_Recieve</AccessText>
+            </Button>
+            <Button Click="ShowEmergencyAppointmentWindow_Click" Margin="5">
+                <AccessText>_Emergency Appointment</AccessText>
+            </Button>
+        </ToolBar>
+        <DataGrid DockPanel.Dock="Bottom"
+                  ItemsSource="{Binding Path=Patients, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding Path=SelectedPatient, UpdateSourceTrigger=PropertyChanged}"
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  Width="700" Height="350">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="First name" Binding="{Binding FirstName}" Width="300"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last name" Binding="{Binding LastName}" Width="300"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="ShowMedicalRecord_Click">Medical Record</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>

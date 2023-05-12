@@ -1,0 +1,64 @@
+[
+  {
+    "Id": 0,
+    "IsBlocked": false,
+    "CreatedAppointmentsCount": 0,
+    "ChangedAppointmentsCount": 0,
+    "FirstName": "Jelen",
+    "LastName": "Jeeeelenaaaaa",
+    "MedicalRecord": {
+      "Height": 165,
+      "Weight": 51,
+      "MedicalHistory": [
+        "meningitis"
+      ],
+      "Allergens": [
+        "penicilin",
+        " antibiotik",
+        " ne voli da guta velike pilule"
+      ],
+      "Anamnesis": "neka nova kul bolest"
+    }
+  },
+  {
+    "Id": 2,
+    "IsBlocked": false,
+    "CreatedAppointmentsCount": 0,
+    "ChangedAppointmentsCount": 0,
+    "FirstName": "novo",
+    "LastName": "ime",
+    "MedicalRecord": {
+      "Height": 120,
+      "Weight": 35,
+      "MedicalHistory": [
+        "decije boginje"
+      ],
+      "Allergens": [
+        "penicilin",
+        " antibiotik"
+      ],
+      "Anamnesis": "najnovija anamznea za najnovijeg pacjenta"
+    }
+  },
+  {
+    "Id": 12,
+    "IsBlocked": false,
+    "CreatedAppointmentsCount": 0,
+    "ChangedAppointmentsCount": 0,
+    "FirstName": "novo",
+    "LastName": "ime",
+    "MedicalRecord": {
+      "Height": 160,
+      "Weight": 95,
+      "MedicalHistory": [
+        "bronhijalna astma",
+        " encefalitis"
+      ],
+      "Allergens": [
+        "penicilin",
+        " antibiotik"
+      ],
+      "Anamnesis": "kako ovo radi"
+    }
+  }
+]

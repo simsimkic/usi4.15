@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Hospital.View.Admin.Pages.Filter.FilterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"    
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="600"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition  Height="200"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom"  DockPanel.Dock="Bottom" Margin="0,0,0,5">
+                <TextBox x:Name="searchTb"  TextWrapping="Wrap"  Width="120"/>
+                <ComboBox x:Name="typeCb"  Width="100"  Height="22" RenderTransformOrigin="0.5,0.451" Margin="5,0,0,0"/>
+                <ComboBox x:Name="roomCb"  Width="100" Height="22" Margin="5,0,0,0"/>
+                <ComboBox x:Name="countCb"  Width="100" Height="22" Margin="5,0,0,0"/>
+                <CheckBox x:Name="storageCb" Content="Magacin" Margin="5,0,0,0" IsChecked="False" />
+            </StackPanel>
+
+            <ListBox  DockPanel.Dock="Bottom" Name="lb1"  ItemsSource="{Binding Path=filteredEquipment, UpdateSourceTrigger=PropertyChanged}"  Width="200" Height="130" Margin="0,0,0,5" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

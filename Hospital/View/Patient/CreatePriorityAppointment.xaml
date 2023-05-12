@@ -1,0 +1,84 @@
+﻿<Window x:Class="Hospital.View.CreatePriorityAppointment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital.View"
+        mc:Ignorable="d"
+        Title="CreatePriorityAppointment" Height="320" Width="400"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:Priority="clr-namespace:Hospital.Model">
+    <Window.Resources>
+        <ControlTemplate x:Key="ValidationTemplate">
+            <StackPanel>
+                <!-- Placeholder for the TextBox itself -->
+                <AdornedElementPlaceholder x:Name="textBox" />
+                <TextBlock Text="{Binding [0].ErrorContent}" Foreground="Red" />
+            </StackPanel>
+        </ControlTemplate>
+        <ObjectDataProvider x:Key="priority" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="Priority:Priority"/>
+                </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Width="330" Height="200">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Height="30">Doctor</Label>
+            <Label Grid.Row="1" Grid.Column="0" Height="30">Start Time</Label>
+            <Label Grid.Row="2" Grid.Column="0" Height="30">End Time</Label>
+            <Label Grid.Row="3" Grid.Column="0" Height="30">Due to</Label>
+            <Label Grid.Row="4" Grid.Column="0" Height="30">Priority</Label>
+            <TextBox Grid.Row="0" Grid.Column="1"
+                     Text="{Binding Path=IdDoctor, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                     Height="30">
+            </TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Text="{Binding Path=From, StringFormat=hh\\:mm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                     Height="30">
+            </TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1"
+                     Text="{Binding Path=To, StringFormat=hh\\:mm,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                     Height="30">
+            </TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1"
+                     Text="{Binding Path=DueTo, StringFormat={}{0:dd.MM.yyyy HH:mm}, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                     Height="30">
+            </TextBox>
+            <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding Source={StaticResource priority}}"
+                  SelectedItem="{Binding Path=Priority}" Height="30"/>
+        </Grid>
+        <WrapPanel Grid.Row="1" FlowDirection="RightToLeft">
+            <Button Content="Cancel" IsCancel="True" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Margin="20, 5, 20, 5"
+                    Click="CancelButton_Click" />
+            <Button Content="Create" IsDefault="True" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Margin="20, 5, 20, 5"
+                    Click="CreateAppointment_Click" />
+        </WrapPanel>
+
+    </Grid>
+</Window>
